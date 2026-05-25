@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-hue: 0deg;
+}
+
+@layer base {
+  body {
+    /* Deep Obsidian */
+    @apply bg-[#0B0B0F] text-gray-100 antialiased selection:bg-cyan-500/30;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    cursor: none;
+  }
+  
+  a, button, input, .cursor-pointer {
+    cursor: none !important;
+  }
+  
+  /* Font Normalization & Consistent Line Heights */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight leading-[1.1];
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* Custom starting state for the toe-to-heel reveal */
+.clip-reveal-start {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+/* Text Outline Effect */
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+/* Dynamic Color Theme */
+.theme-adaptive {
+  filter: hue-rotate(var(--theme-hue));
+  transition: filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth image fade for product selector */
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
