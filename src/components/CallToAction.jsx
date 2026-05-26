@@ -63,7 +63,7 @@ export default function CallToAction() {
             />
             <img 
               key={selectedColor.img}
-              src={`/imgs/${selectedColor.img}.png`} 
+              src={`${import.meta.env.BASE_URL}imgs/${selectedColor.img}.png`} 
               alt={`Aura Kinetic in ${selectedColor.name}`}
               className="relative z-10 w-full h-full object-cover rounded-xl shadow-2xl animate-fade-in"
             />

@@ -67,7 +67,7 @@ export default function TechSpecs() {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img 
           ref={bgRef}
-          src="/imgs/2.png" 
+          src={`${import.meta.env.BASE_URL}imgs/2.png`} 
           alt="Technology Background" 
           className="absolute -top-[10%] w-full h-[120%] object-cover opacity-10"
         />

@@ -58,7 +58,7 @@ export default function ImageGallery() {
             >
               <div className="w-full h-[130%] absolute -top-[15%] left-0 group-hover:scale-105 transition-transform duration-700 ease-out">
                 <img 
-                  src={`/imgs/${num}.png`} 
+                  src={`${import.meta.env.BASE_URL}imgs/${num}.png`} 
                   alt={`Gallery view ${num}`} 
                   className="inner-img w-full h-full object-cover"
                 />
@@ -78,7 +78,7 @@ export default function ImageGallery() {
         >
           <div className="relative w-[90%] max-w-6xl h-[90vh] flex items-center justify-center p-4">
             <img 
-              src={`/imgs/${activeImg}.png`} 
+                src={`${import.meta.env.BASE_URL}imgs/${activeImg}.png`} 
               alt={`Expanded view ${activeImg}`} 
               className="max-w-full max-h-full object-contain rounded-xl shadow-[0_0_100px_rgba(6,182,212,0.15)]"
             />

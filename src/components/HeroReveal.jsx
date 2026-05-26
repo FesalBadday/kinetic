@@ -12,7 +12,7 @@ export default function HeroReveal({ shoeImg = 6 }) {
   const frameCount = 80; // Change this to your exact total number of frames
   const videoDetails = { frame: 0 };
   // Update `.png` to `.jpg` if your frames do not have a transparent background
-  const currentFrame = (index) => `/frames/${(index + 1).toString().padStart(2, '0')}.png`;
+  const currentFrame = (index) => `${import.meta.env.BASE_URL}frames/${(index + 1).toString().padStart(2, '0')}.png`;
 
   useGSAP(() => {
     const canvas = canvasRef.current;

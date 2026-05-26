@@ -63,7 +63,7 @@ export default function MacroShots() {
         {/* High-res close up of the shoe fabric/textures from imgs folder */}
         <img 
           ref={imgRef}
-          src="/imgs/3.png" 
+          src={`${import.meta.env.BASE_URL}imgs/3.png`}
           alt="Macro detail" 
           className="absolute -top-[10%] left-0 w-full h-[120%] object-cover opacity-60 mix-blend-luminosity"
         />
